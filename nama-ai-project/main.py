@@ -1,5 +1,9 @@
 """Nama AI — FastAPI backend entry point."""
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import logging
 from contextlib import asynccontextmanager
 
