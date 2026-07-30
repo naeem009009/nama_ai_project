@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+env/
+envs/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Database
+nama-ai-project/nama_ai.db
+
+# Logs
+nama-ai-project/server_log.txt
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+groq_memory.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+cookies.txt

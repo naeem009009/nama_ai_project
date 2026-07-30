@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In — Nama AI</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%236366F1'/%3E%3Cpath d='M10 20 L16 10 L22 20Z' fill='white' opacity='0.9'/%3E%3C/svg%3E" />
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <!-- Back link -->
+        <a href="/" class="auth-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Back to home
+        </a>
+
+        <div class="auth-card">
+            <!-- Brand -->
+            <div class="auth-brand">
+                <div class="brand-icon">N</div>
+                <h1>Nama AI</h1>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Sign In</button>
+                <button class="auth-tab" data-tab="signup">Create Account</button>
+            </div>
+
+            <!-- ============ Login Form ============ -->
+            <form id="login-form" class="auth-form active-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input
+                        id="login-username"
+                        type="text"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input
+                        id="login-password"
+                        type="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    />
+                </div>
+                <button type="submit" class="btn-auth-submit">
+                    Sign In
+                    <span class="btn-spinner hidden"></span>
+                </button>
+                <p class="auth-redirect">
+                    Don't have an account?
+                    <a href="#" data-tab="signup">Create one</a>
+                </p>
+            </form>
+
+            <!-- ============ Signup Form ============ -->
+            <form id="signup-form" class="auth-form">
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input
+                        id="signup-username"
+                        type="text"
+                        placeholder="Choose a username"
+                        autocomplete="username"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input
+                        id="signup-email"
+                        type="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input
+                        id="signup-password"
+                        type="password"
+                        placeholder="At least 6 characters"
+                        autocomplete="new-password"
+                        required
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input
+                        id="signup-confirm"
+                        type="password"
+                        placeholder="Repeat your password"
+                        autocomplete="new-password"
+                        required
+                    />
+                </div>
+                <button type="submit" class="btn-auth-submit">
+                    Create Account
+                    <span class="btn-spinner hidden"></span>
+                </button>
+                <p class="auth-redirect">
+                    Already have an account?
+                    <a href="#" data-tab="login">Sign in</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Toast container for error/success messages -->
+        <div id="auth-toast" class="auth-toast hidden"></div>
+    </div>
+
+    <script src="/static/js/main.js?v=2"></script>
+</body>
+</html>
